@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Trabajando con Formularios </h1>
+    <!-- Formulario  El atributo action describe hacia donde viajan los datos.  # es local.  Ejemplo.  Method Post dice Enviar... a: # (local) -->
+<form action="#" method="POST"></form>
+
+<fieldset> 
+    <!-- Fieldset permite delimitar un borde y Legend darle un texto. -->
+    <legend>
+<h2>Registro de usuario - Ingrese sus datos</h2>
+    </legend>
+
+  
+    <label for= "Name">Ingrese su nombre</label>
+    <input type="text" name="name" id="name" required minlength="5" maxlength="20">
+    <br>
+    <p>
+        <label for="lastname"> Apellido</label>
+        <input type="text" name="lastname" id="lastname">
+    <p>
+        <label for="email">Correo electronico</label>
+        <input type="text" name="email" id="email" placeholder="usuario@correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$ required" >
+    </p>
+    <p>
+        <label for= "phone">Teléfono</label>
+    <input type="tel" name="phone" id="phone" placeholder="54 44 44 444"  minlength="5" maxlength="20" pattern="{0-9}-{3}-{0-9}{3}-{0-9}">
+    </p>
+    <p><label for="codpos">Código Postal</label>
+        <input type="number" name="codpos">
+    </p>
+    <p>
+        <label for="date">Fecha Nacimiento</label>
+        <input type="date" name="date" id="date" >
+    </p>
+    <p> <!-- <radio sirve para opciones check> -->
+        <label for="nivel">Nivel de Estudios</label> 
+        <input type="radio" name="nivel" id="1"> Primario
+        <input type="radio" name="nivel" id="2"> Secundario
+        <input type="radio" name="nivel" id="3"> Universitario
+
+    <p>
+       
+        <label for="ocupacion">Ocupación</label>
+        <!-- para usar un selector.  Se usa etiqueta select.  entonces...le pongo ocupacion al name y al id.  Lo que se va a enviar en el subtmit es elvalue-->
+        <select name="ocupacion" id="ocupacion">
+        <optgroup label="Situacion Laboral">
+            <option value="">Desempleado</option>
+            <option value="">Empleado</option>
+            <option value="">Cuentapropista</option>
+        </optgroup>
+        </select>
+        <br>
+        <!-- Seleccion multiple -->
+        <select multiple="true">
+            <option value="0">Desempleado</option>
+            <option value="1">Empleado</option>
+            <option value="2">Cuentapropista</option>
+            <option value="3">En busqueda</option>
+            <option value="4">Estudiante</option>
+            <option value="5">Trainee</option>
+
+
+        </select>
+    </p>
+       
+    </p>
+<p>
+    <!-- a diferencia del radio button, acá pongo distinto name -->
+    <label for="">Conocimiento en Programación</label>
+    <input type="checkbox" name="html" value="html" id="Conocimiento"> HTML
+    <input type="checkbox" name="html" value="html" id="Conocimiento"> CSS 
+    <input type="checkbox" name="js" value="js" id="Conocimiento"> JS
+
+</p>
+<p>
+    <label for="imagen">Foto de Perfil</label>
+    <input type="file" name="imagen" id="imagen">
+</p>
+
+<p>
+    <label for="">Contraseña</label>
+    <input type="password" name="password" id="password">
+</p>
+<p>
+    <label for="">Descripción</label>
+    <textarea name="" cols="40" rows="10"></textarea>
+</p>
+    <input type="submit" value="Cargar Información">
+    <input type="reset" value="Limpiar formulario"> 
+  
+</fieldset>
+
+<!-- Podemos cargar estas cosas en paginas de test.  Formspree, por ejemplo 
+ Me da un endpoitn para cargar dentro del action.-->
+
+
+
+
+
+</body> 
+</html>
